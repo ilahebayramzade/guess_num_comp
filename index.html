@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Number Guessing Game</h1>
+<p>Try to guess the number between 1 and 20.</p>
+
+<script>
+    function guessNumber(x) {
+        const randomNumber = Math.floor(Math.random() * x) + 1;
+        let guess = 0;
+
+        while (guess !== randomNumber) {
+            guess = parseInt(prompt(`Guess a number between 1 and ${x}: `));
+
+            if (guess < randomNumber) {
+                alert("Sorry, guess again. Too low.");
+            } else if (guess > randomNumber) {
+                alert("Sorry, guess again. Too high.");
+            }
+        }
+
+        alert(`Yay, congrats. You have guessed the number ${randomNumber} correctly!!`);
+    }
+
+    // Call the function with an argument, for example, 20
+    guessNumber(20);
+</script>
+
+</body>
+</html>
