@@ -18,25 +18,26 @@
 <p>Try to guess the number between 1 and 20.</p>
 
 <script>
-    function guessNumber(x) {
+    const x=+prompt("enter number")
+    function guessNumber(x){
         const randomNumber = Math.floor(Math.random() * x) + 1;
         let guess = 0;
-
         while (guess !== randomNumber) {
             guess = parseInt(prompt(`Guess a number between 1 and ${x}: `));
-
-            if (guess < randomNumber) {
+            if(guess<=20){
+                if (guess < randomNumber) {
                 alert("Sorry, guess again. Too low.");
-            } else if (guess > randomNumber) {
+                } else if (guess > randomNumber) {
                 alert("Sorry, guess again. Too high.");
+               }
+            }
+            else{
+                alert("Please,enter correctly")
             }
         }
-
-        alert(`Yay, congrats. You have guessed the number ${randomNumber} correctly!!`);
+        alert('Yay, congrats. You have guessed the number ${randomNumber} correctly!!');
     }
-
-    // Call the function with an argument, for example, 20
-    guessNumber(20);
+    guessNumber(x);
 </script>
 
 </body>
