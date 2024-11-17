@@ -19,5 +19,5 @@ This project is a simple, interesting game that I made to develop my basic conce
 🚀 How to Run?
 1. Clone the repository:
 ```bash
-git clone https://github.com/your_name/computer-guess-number-game.git
-cd computer-guess-number-game
+git clone https://github.com/ilahebayramzade/guess_num_comp.git
+cd guess_num_comp
